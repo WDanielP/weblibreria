@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import com.distribuida.entities.Categoria;
 
-@Repository
+
 public interface CategoriaDAO {
 	
 	public List<Categoria>findAll();
