@@ -22,7 +22,7 @@ public class ClienteController {
 	public String findAll(Model model) {
 		
 		//try {
-			List<Cliente> clientes=clienteDAO.findAll();
+			List<Cliente> clientes=clienteDAO.findAll();//base de datos
 			
 			model.addAttribute("clientes",clientes);//key:clientes o keyclientes !! valor:clientes
 			

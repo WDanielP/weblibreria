@@ -29,13 +29,13 @@ public class Libro { //siempre la primera en mayuscula
 	@Column(name="editorial")
 	private String editorial;
 	@Column(name="num_paginas")
-	private int numpaginas;
+	private int numPaginas;
 	@Column(name="edicion")
 	private String edicion;
 	@Column(name="idioma")
 	private String idioma;
 	@Column(name="fecha_publicacion")
-	private Date fechapublicacion;
+	private Date fechaPublicacion;
 	@Column(name="descripcion")
 	private String descripcion;
 	@Column(name="tipo_pasta")
@@ -43,7 +43,7 @@ public class Libro { //siempre la primera en mayuscula
 	@Column(name="ISBN")
 	private String ISBN;
 	@Column(name="num_ejemplares")
-	private int numejemplares;
+	private int numEjemplares;
 	@Column(name="portada")
 	private String portada;
 	@Column(name="presentacion")
@@ -65,6 +65,23 @@ public class Libro { //siempre la primera en mayuscula
 
 
 
+	/**
+	 * @param idLibro
+	 * @param titulo
+	 * @param editorial
+	 * @param numpaginas
+	 * @param edicion
+	 * @param idioma
+	 * @param fechapublicacion
+	 * @param descripcion
+	 * @param tipoPasta
+	 * @param iSBN
+	 * @param numejemplares
+	 * @param portada
+	 * @param presentacion
+	 * @param precio
+	 * @param string
+	 */
 	public Libro(int idLibro, String titulo, String editorial, int numpaginas, String edicion, String idioma,
 			Date fechapublicacion, String descripcion, String tipoPasta, String iSBN, int numejemplares, String portada,
 			String presentacion, Double precio, String string) {
@@ -72,14 +89,14 @@ public class Libro { //siempre la primera en mayuscula
 		this.idLibro = idLibro;
 		this.titulo = titulo;
 		this.editorial = editorial;
-		this.numpaginas = numpaginas;
+		this.numPaginas = numpaginas;
 		this.edicion = edicion;
 		this.idioma = idioma;
-		this.fechapublicacion = fechapublicacion;
+		this.fechaPublicacion = fechapublicacion;
 		this.descripcion = descripcion;
 		this.tipoPasta = tipoPasta;
 		this.ISBN = iSBN;
-		this.numejemplares = numejemplares;
+		this.numEjemplares = numejemplares;
 		this.portada = portada;
 		this.presentacion = presentacion;
 		this.precio = precio;
@@ -124,14 +141,14 @@ public class Libro { //siempre la primera en mayuscula
 
 
 
-	public int getNumpaginas() {
-		return numpaginas;
+	public int getNumPaginas() {
+		return numPaginas;
 	}
 
 
 
-	public void setNumpaginas(int numpaginas) {
-		this.numpaginas = numpaginas;
+	public void setNumPaginas(int numpaginas) {
+		this.numPaginas = numpaginas;
 	}
 
 
@@ -160,14 +177,14 @@ public class Libro { //siempre la primera en mayuscula
 
 
 
-	public Date getFechapublicacion() {
-		return fechapublicacion;
+	public Date getFechaPublicacion() {
+		return fechaPublicacion;
 	}
 
 
 
-	public void setFechapublicacion(Date fechapublicacion) {
-		this.fechapublicacion = fechapublicacion;
+	public void setFechaPublicacion(Date fechapublicacion) {
+		this.fechaPublicacion = fechapublicacion;
 	}
 
 
@@ -203,19 +220,19 @@ public class Libro { //siempre la primera en mayuscula
 
 
 	public void setISBN(String iSBN) {
-		ISBN = iSBN;
+		this.ISBN = iSBN;
 	}
 
 
 
 	public int getNumEjemplares() {
-		return numejemplares;
+		return numEjemplares;
 	}
 
 
 
 	public void setNumEjemplares(int numEjemplares) {
-		this.numejemplares = numEjemplares;
+		this.numEjemplares = numEjemplares;
 	}
 
 
@@ -274,13 +291,13 @@ public class Libro { //siempre la primera en mayuscula
 
 
 	public int getNumejemplares() {
-		return numejemplares;
+		return numEjemplares;
 	}
 
 
 
 	public void setNumejemplares(int numejemplares) {
-		this.numejemplares = numejemplares;
+		this.numEjemplares = numejemplares;
 	}
 
 
@@ -300,9 +317,9 @@ public class Libro { //siempre la primera en mayuscula
 	@Override
 	public String toString() {
 		return "Libro [idLibro=" + idLibro + ", titulo=" + titulo + ", editorial=" + editorial + ", numpaginas="
-				+ numpaginas + ", edicion=" + edicion + ", idioma=" + idioma + ", fechapublicacion=" + fechapublicacion
+				+ numPaginas + ", edicion=" + edicion + ", idioma=" + idioma + ", fechaPublicacion=" + fechaPublicacion
 				+ ", descripcion=" + descripcion + ", tipoPasta=" + tipoPasta + ", ISBN=" + ISBN + ", numejemplares="
-				+ numejemplares + ", portada=" + portada + ", presentacion=" + presentacion + ", precio=" + precio
+				+ numEjemplares + ", portada=" + portada + ", presentacion=" + presentacion + ", precio=" + precio
 				+ ", categoria=" + categoria + ", autor=" + autor + "]";
 	}
 
