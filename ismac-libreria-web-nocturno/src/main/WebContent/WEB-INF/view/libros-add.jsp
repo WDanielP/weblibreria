@@ -28,7 +28,7 @@
 		<input type="text" id="idioma" name="idioma" value="${libro.idioma}"/>
 		<br/>
 		Fecha de Publicacion
-		<input type="date" id="fechaPublicacion" name="fechaPublicacion" value="${libro.fechaPublicacion}"/>
+		<input type="date" id="fechaPublicacion" name="fechaPublicacion" value="${fn:substring(libro.fechaPublicacion,0,10)}"/>
 		<br/>
 		Descripcion
 		<input type="text" id="descripcion" name="descripcion" value="${libro.descripcion}"/>
@@ -40,7 +40,7 @@
 		<input type="text" id="ISBN" name="ISBN" value="${libro.ISBN}"/>
 		<br/>
 		Numero de Ejemplares
-		<input type="number" id="numeroEjemplares" name="numeroEjemplares" value="${libro.numeroEjemplares}"/>
+		<input type="number" id="numEjemplares" name="numEjemplares" value="${libro.numEjemplares}"/>
 		<br/>
 		Portada
 		<input type="text" id="portada" name="portada" value="${libro.portada}"/>
@@ -54,17 +54,21 @@
 		Categoria
 		<select id="idCategoria" name="idCategoria">
 			<c:forEach var="item" items="${categorias}">
-				<option value="${item.idCategoria}">${item.categoria}</option>
+				<option value="${item.idCategoria}" ${item.idCategoria == libro.categoria.idCategoria ? 'selected' : '' }>${item.categoria}</option>
 			</c:forEach>
 		</select>
 		<br/>
 		Autor
 		<select id="idAutor" name="idAutor">
 			<c:forEach var="item" items="${autores}">
-				<option value="${item.idAutor}">${item.nombre} ${item.apellido}</option>
+				<option value="${item.idAutor}" ${item.idAutor == libro.autor.idAutor ? 'selected' : '' }>${item.nombre} ${item.apellido}</option>
 			</c:forEach>
 		</select>
 		<br/>
+		<button type="submit">Guardar</button>
+			<button onclick="window.location.href='/ismac-libreria-web-nocturno/libros2/findAll'; return false;">
+					Cancelar
+		</button>
 	</form>
 </body>
 </html>
