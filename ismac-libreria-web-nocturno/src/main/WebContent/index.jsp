@@ -4,9 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+	<title>SISTEMA LIBRERIA</title>
+	
+	<link rel ="stylesheet" href="${pageContext.request.contextPath}/resources/css/estilos.css"/>
 </head>
 <body>
 <h1>BIENVENIDO DESDE LIBRERIA WEB Y TOMCAT </h1>
+
 </body>
 </html>
