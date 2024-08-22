@@ -83,8 +83,7 @@ public class LibroController2 {
 		if (idLibro == null) {
 			
 			
-			Libro libro =new Libro(0,titulo,editorial,numPaginas,edicion,idioma,fechaPublicacion,descripcion
-					,tipoPasta,ISBN,numEjemplares,portada,presentacion,precio, presentacion);
+			Libro libro =new Libro(0,titulo,editorial,numPaginas,edicion,idioma,fechaPublicacion,descripcion,tipoPasta,ISBN,numEjemplares,portada,presentacion,precio,presentacion);
 			libro.setCategoria(categoriaDAO.findOne(idCategoria));
 			libro.setAutor(autorDAO.findOne(idAutor));
 			libroDAO.add(libro);

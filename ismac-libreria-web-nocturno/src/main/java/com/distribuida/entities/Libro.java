@@ -149,8 +149,8 @@ public class Libro { //siempre la primera en mayuscula
 
 
 
-	public void setNumPaginas(int numpaginas) {
-		this.numPaginas = numpaginas;
+	public void setNumPaginas(int numPaginas) {
+		this.numPaginas = numPaginas;
 	}
 
 
@@ -185,8 +185,8 @@ public class Libro { //siempre la primera en mayuscula
 
 
 
-	public void setFechaPublicacion(Date fechapublicacion) {
-		this.fechaPublicacion = fechapublicacion;
+	public void setFechaPublicacion(Date fechaPublicacion) {
+		this.fechaPublicacion = fechaPublicacion;
 	}
 
 
@@ -275,9 +275,6 @@ public class Libro { //siempre la primera en mayuscula
 
 
 
-
-
-
 	public Categoria getCategoria() {
 		return categoria;
 	}
@@ -286,20 +283,6 @@ public class Libro { //siempre la primera en mayuscula
 
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
-		
-	}
-	
-
-
-
-	public int getNumejemplares() {
-		return numEjemplares;
-	}
-
-
-
-	public void setNumejemplares(int numejemplares) {
-		this.numEjemplares = numejemplares;
 	}
 
 
@@ -318,12 +301,13 @@ public class Libro { //siempre la primera en mayuscula
 
 	@Override
 	public String toString() {
-		return "Libro [idLibro=" + idLibro + ", titulo=" + titulo + ", editorial=" + editorial + ", numpaginas="
+		return "Libro [idLibro=" + idLibro + ", titulo=" + titulo + ", editorial=" + editorial + ", numPaginas="
 				+ numPaginas + ", edicion=" + edicion + ", idioma=" + idioma + ", fechaPublicacion=" + fechaPublicacion
-				+ ", descripcion=" + descripcion + ", tipoPasta=" + tipoPasta + ", ISBN=" + ISBN + ", numejemplares="
+				+ ", descripcion=" + descripcion + ", tipoPasta=" + tipoPasta + ", ISBN=" + ISBN + ", numEjemplares="
 				+ numEjemplares + ", portada=" + portada + ", presentacion=" + presentacion + ", precio=" + precio
 				+ ", categoria=" + categoria + ", autor=" + autor + "]";
 	}
+
 
 
 	

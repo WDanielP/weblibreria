@@ -53,7 +53,7 @@
 			<td>${item.numEjemplares}</td>
 			<td>
 				<img alt="Portada" height="100" width="100" src="${pageContext.request.contextPath}/resources/img/${item.portada}">
-				${item.portada}</td>
+			${item.portada}</td>
 			<td>${item.presentacion}</td>
 			<td>${item.precio}</td>
 			<td>${item.categoria.categoria}</td>
