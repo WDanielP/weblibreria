@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.distribuida.entities.Autor;
+import com.distribuida.entities.Categoria;
 
 @Repository
 public class AutorDAOImpl implements AutorDAO{
@@ -34,27 +35,33 @@ public class AutorDAOImpl implements AutorDAO{
 	
 
 	@Override
+	@Transactional
 	public Autor findOne(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		Session session =sessionFactory.getCurrentSession();
+		return session.get(Autor.class,id);
 	}
 
 	@Override
+	@Transactional
 	public void add(Autor autor) {
-		// TODO Auto-generated method stub
+		Session session=sessionFactory.getCurrentSession();	// TODO Auto-generated method stub
+		session.saveOrUpdate(autor);
 
 	}
 
 	@Override
+	@Transactional
 	public void up(Autor autor) {
-		// TODO Auto-generated method stub
+		Session session=sessionFactory.getCurrentSession();	// TODO Auto-generated method stub
+		session.saveOrUpdate(autor);
 
 	}
 
 	@Override
+	@Transactional
 	public void del(int id) {
-		// TODO Auto-generated method stub
-
+		Session session=sessionFactory.getCurrentSession();
+		session.delete(findOne(id));
 	}
 
 }

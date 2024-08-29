@@ -10,14 +10,15 @@
 <%-- <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/estilos.css"/>--%>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css"/>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap-table.min.css"/>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
 </head>
 <body>
 <nav></nav>
 <section class="px-5 py-5">
  <h1> LIBROS</h1>
 <div class="container" style="text-align: center;">
-	<button class="btn btn-primary" onclick="window.location.href='/ismac-libreria-web-nocturno/libros2/findOne?opcion=1'; return false ;"> Agregar
-	
+	<button class="btn btn-primary" onclick="window.location.href='/ismac-libreria-web-nocturno/libros2/findOne?opcion=1'; return false ;"> <i class="fa-solid fa-book"></i>Agregar
 </button>
 </div>
 <div class="table-responsive">
@@ -67,19 +68,17 @@
  				<td>${item.tipoPasta}</td>
  				<td>${item.ISBN}</td>
  				<td>${item.numEjemplares}</td>
- 				<td>
- 					<img alt="Portada"  height="100" width="100" src="${pageContext.request.contextPath}/resources/img/${item.portada}">
- 					${item.portada}</td>
+ 				<td><img alt="Portada"  height="100" width="100" src="${pageContext.request.contextPath}/resources/img/${item.portada}">${item.portada}</td>
  				<td>${item.presentacion}</td>
  				<td>${item.precio}</td>
  				<td>${item.categoria.categoria}</td>
  				<td>${item.autor.nombre} ${item.autor.apellido}</td>
  				<td>
- 				<button  class="btn btn-success" onclick ="window.location.href='/ismac-libreria-web-nocturno/libros2/findOne?idLibro=${item.idLibro}&opcion=1'; return false ;"> Actualizar
+ 				<button  class="btn btn-success" onclick ="window.location.href='/ismac-libreria-web-nocturno/libros2/findOne?idLibro=${item.idLibro}&opcion=1'; return false ;"> <i class="fa-solid fa-arrows-rotate"></i> 
 	
 				</button>
 				
- 				<button class="btn btn-danger" onclick ="window.location.href='/ismac-libreria-web-nocturno/libros2/findOne?idLibro=${item.idLibro}&opcion=2'; return false ;"> Eliminar
+ 				<button class="btn btn-danger" onclick ="window.location.href='/ismac-libreria-web-nocturno/libros2/findOne?idLibro=${item.idLibro}&opcion=2'; return false ;"><i class="fa-solid fa-trash"></i> 
 				</button>
  				</td>
  				
