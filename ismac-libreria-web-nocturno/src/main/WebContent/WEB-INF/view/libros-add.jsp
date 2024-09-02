@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="UTF-8">
 <title>SISTEMA LIBRERIA</title>
 <%-- <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/estilos.css"/>--%>
@@ -12,6 +13,8 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap-table.min.css"/>
 </head>
 <body>
+
+
 
 	<nav></nav>
 	<section class="py-5 px-5">

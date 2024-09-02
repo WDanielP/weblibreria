@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="UTF-8">
 <title>SISTEMA LIBRERIA</title>
 <%-- <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/estilos.css"/>--%>
@@ -16,7 +17,7 @@
 <body>
 <nav></nav>
 <section class="px-5 py-5">
- <h1> LIBROS</h1>
+ <h1>Lista de Libros</h1>
 <div class="container" style="text-align: center;">
 	<button class="btn btn-primary" onclick="window.location.href='/ismac-libreria-web-nocturno/libros2/findOne?opcion=1'; return false ;"> <i class="fa-solid fa-book"></i>Agregar
 </button>
